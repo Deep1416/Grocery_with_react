@@ -59,14 +59,14 @@ function Display() {
   };
 
  useEffect(()=>{
-  let save = JSON.parse(localStorage.getItem("text"));
+  let save = JSON.parse(localStorage.getItem("saveass"));
   if(save){
     setText(save)
   }
  },[])
 
  useEffect(()=>{
-  localStorage.setItem("text" , JSON.stringify(data))
+  localStorage.setItem("saveass" , JSON.stringify(data))
  },[data])
 
   return (
