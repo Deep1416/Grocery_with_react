@@ -84,7 +84,7 @@ function Display() {
           />
           <button
             type="submit"
-            className="bg-[#06b6d4] border px-4 text-white  text-xl rounded-r-md"
+            className="bg-[#06b6d4] border px-4 text-white  text rounded-r-md"
             onClick={addItem}
           >
             Add Item
