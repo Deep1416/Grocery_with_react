@@ -4,7 +4,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function Display() {
-  const [text, setText] = useState(" ");
+  const [text, setText] = useState("");
   const [data, setData] = useState([]);
 
   const showData = (e) => {
