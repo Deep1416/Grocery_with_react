@@ -62,14 +62,18 @@ function Display() {
 
  useEffect(()=>{
   let save = JSON.parse(localStorage.getItem("saveass"));
-  if(save){
-    setText(save)
+  console.log(save);
+  // if(save)
+  if(save == null){
+    setData([])
+  }else{
+    setData(save)
   }
  },[])
 
- useEffect(()=>{
-  localStorage.setItem("saveass" , JSON.stringify(data))
- },[data])
+//  useEffect(()=>{
+//   localStorage.setItem("saveass" , JSON.stringify(data))
+//  },[data])
 
   return (
     <div>
