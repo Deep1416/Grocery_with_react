@@ -10,7 +10,20 @@ function Display() {
   const showData = (e) => {
     setText(e.target.value);
   };
-
+  useEffect(()=>{
+    let save = JSON.parse(localStorage.getItem("saveass"));
+    console.log(save);
+    // if(save)
+    if(save == null){
+      setData([])
+    }else{
+      setData(save)
+    }
+   },[])
+  
+   useEffect(()=>{
+    localStorage.setItem("saveass" , JSON.stringify(data))
+   },[data])
   const addItem = () => {
 // console.log(text);
     if (text == "") {
@@ -60,20 +73,7 @@ function Display() {
     setData(value);
   };
 
- useEffect(()=>{
-  let save = JSON.parse(localStorage.getItem("saveass"));
-  console.log(save);
-  // if(save)
-  if(save == null){
-    setData([])
-  }else{
-    setData(save)
-  }
- },[])
-
-//  useEffect(()=>{
-//   localStorage.setItem("saveass" , JSON.stringify(data))
-//  },[data])
+ 
 
   return (
     <div>
