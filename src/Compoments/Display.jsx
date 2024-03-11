@@ -4,7 +4,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function Display() {
-  const [text, setText] = useState(" ");
+  const [text, setText] = useState("");
   const [data, setData] = useState([]);
 
   const showData = (e) => {
@@ -12,7 +12,9 @@ function Display() {
   };
 
   const addItem = () => {
-    if (text === "") {
+// console.log(text);
+    if (text == "") {
+      
       // alert("Please provided data");
       toast.error("Please Provide Value", {
         position: "top-center",
